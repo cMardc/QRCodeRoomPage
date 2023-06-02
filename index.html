@@ -1,0 +1,751 @@
+<!DOCTYPE html> <!-- Document Type Is HTML-->
+<html lang="en"> <!-- English Language-->
+<head> <!-- Header / Info About Page-->
+    <meta charset="UTF-8"> <!-- Symbols -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome!</title> <!-- Title Of Page-->
+    <link rel="stylesheet" href="style.css">
+    <!-- Connect CSS File To HTML-->
+    <script src="https://kit.fontawesome.com/d2ec37db1e.js" crossorigin="anonymous"></script>
+    <!-- Font Awesome JS File-->
+    <script src="index.js"></script>
+    <!--Connect JS File To HTML -->
+</head> <!-- End Of Head | Info -->
+<body id="main"> <!-- Main / Body Part Of Page(Visible)-->
+    <script src="https://kit.fontawesome.com/d2ec37db1e.js" crossorigin="anonymous"></script>
+    <!-- Font Awesome JS File-->
+    <h1 class="welcome" id="extra">Welcome!</h1>
+    <!-- Welcome Sign -->
+    <h1 class="welcome">To My Room!</h1>
+    <!-- Another Welcome Sign-->
+    <br><hr><br> <!-- Next Line, Give Line, Next Line-->
+    <div class="wifi"> <!-- Abou Wifi Page-->
+        <br> <!-- Skip Line-->
+        <h1 id="int"  style="display:inline"><i class="fa-solid fa-globe fa-spin fa-xl"></i>WIFI Settings</h1>
+        <!-- Write "WIFI Settings" On Bigger Format With Cool Emoji-->
+        <br>
+        <div class="intSettings" id="ints1">
+            <!-- About Wifi Page Again-->
+            <br>
+            <!-- Some Info About WIFI In My Room-->
+            <h2 id="int2"><i class="fa-solid fa-wifi"></i>SSID : MM </h2>
+            <h2 id="int2" style="display: inline">
+                <i class="fa-solid fa-key"></i>
+                Password:
+                 <h2 id="int3" style="display:none">0554300008</h2>
+                 <br> <!-- Skip Line-->
+                 <br> <!-- Skip Line-->
+                 <!-- Make A Button/CheckBox To Decide To Show/Hide  Password -->
+                 <label for="passwd" class="container">Show Password
+                    <input type="checkbox" id="passwd" onclick="checkBox()">
+                    <span class="checkmark"></span>
+                </label>
+                </h2> 
+
+            <!-- More WIFI Settings-->
+            <h2 id="int2"><i class="fa-solid fa-lock"></i>Security : WPA2</h2>
+            <h2 id="int2"><i class="fa-solid fa-download"></i>Download : ~60 Mbps</h2>
+            <h2 id="int2"><i class="fa-solid fa-upload"></i>Upload : ~45 Mbps</h2>
+            <h2 id="int2"><i class="fa-solid fa-signal"></i>Ping : ~10 ms</h2>
+            <br> <!-- Skip Line-->
+        </div>
+    </div>
+    <!-- Skip Line 3 Times-->
+    <br>
+    <br>
+    <br>
+    <div class="me"> <!-- Page About Me-->
+        <!-- Some Info About Me Here-->
+        <h1 id="int"><i class="fa-solid fa-id-card fa-xl"></i>About Me</h1>
+        <div class="intSettings">
+            <h2 id="int2"><i class="fa-solid fa-user"></i>Name : Mard</h2>
+            <h2 id="int2"><i class="fa-solid fa-user"></i>Surname : Jafarzadeh</h2>
+            <h2 id="int2"><i class="fa-solid fa-cake-candles"></i>Birthday : 07.09.2010</h2>
+            <h2 id="int2"><i class="fa-solid fa-phone"></i>Phone Numbers</h2>
+            <div class="phn">
+                <h2 id="int5"><i class="fa-solid fa-mobile"></i>Mobile : +994-55-305-75-35</h2>
+                <h2 id="int2"><i class="fa-solid fa-clock"></i>Watch : +994-51-531-98-58</h2>
+                <h2 id="int2"><i class="fa-solid fa-walkie-talkie"></i>Home : +018-65-7-25-49</h2>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="projects">
+        <!-- My Coding Projetcs Here-->
+        <h1 id="int"><i class="fa-solid fa-code"></i>Projects</h1>
+        <div class="project">
+            <h1 id="int" style="display:inline-block"><i class="fa-solid fa-file"></i>Tic Tac Toe.cpp</h1><pre style="display:inline">             </pre><button style="display:inline" onclick="copyCode('#int4')" id="cpBtn">Copy</button>
+            <h1  class="code2"> <!-- First : Tic-TacToe- -->
+                <pre id="int4">
+                    
+    #include "TicTacToe.h"
+    using namespace std;
+    
+    
+    
+    
+    void setColor(string color)
+    {
+        HANDLE col;
+        col = GetStdHandle(STD_OUTPUT_HANDLE);
+        int col_code = 7;
+        if (color == "blue")
+        {
+            col_code = 1;
+        }
+        else if (color == "green")
+        {
+            col_code = 2;
+        }
+        else if (color == "cyan")
+        {
+            col_code = 3;
+        }
+        else if (color == "red")
+        {
+            col_code = 4;
+        }
+        else if (color == "purple")
+        {
+            col_code = 5;
+        }
+        else if (color == "darkYellow")
+        {
+            col_code = 6;
+        }
+        else if (color == "white")
+        {
+            col_code = 7;
+        }
+        else if (color == "grey")
+        {
+            col_code = 8;
+        }
+        else if (color == "brightBlue")
+        {
+            col_code = 9;
+        }
+        else if (color == "brightGreen")
+        {
+            col_code = 10;
+        }
+        else if (color == "brightCyan")
+        {
+            col_code = 11;
+        }
+        else if (color == "brightRed")
+        {
+            col_code = 12;
+        }
+        else if (color == "pink")
+        {
+            col_code = 13;
+        }
+        else if (color == "yellow")
+        {
+            col_code = 14;
+        }
+        else if (color == "brightWhite")
+        {
+            col_code = 15;
+        }
+        else
+        {
+            col_code = 7;
+        }
+        SetConsoleTextAttribute(col, col_code);
+    }
+    
+    bool isWinner(vector&lt;vector&lt;char&gt;&gt;& board)
+    {
+        // Check rows
+        for (int i = 0; i &lt; 3; i++)
+        {
+            if (board[i][0] == board[i][1] && board[i][1] == board[i][2] && board[i][0] != '-')
+            {
+                return true;
+            }
+        }
+    
+        // Check columns
+        for (int j = 0; j &lt; 3; j++) {
+            if (board[0][j] == board[1][j] && board[1][j] == board[2][j] && board[0][j] != '-')
+            {
+                return true;
+            }
+        }
+    
+        // Check diagonals
+        if (board[0][0] == board[1][1] && board[1][1] == board[2][2] && board[0][0] != '-')
+        {
+            return true;
+        }
+        if (board[0][2] == board[1][1] && board[1][1] == board[2][0] && board[0][2] != '-')
+        {
+            return true;
+        }
+    
+        // No winner found
+        return false;
+    }
+
+
+
+
+int main()
+{
+    vector&lt;vector&lt;char&gt;&gt; board;
+    vector&lt;char&gt; ln1 = { '-', '-', '-' };
+    vector&lt;char&gt; ln2 = { '-', '-', '-' };
+    vector&lt;char&gt; ln3 = { '-', '-', '-' };
+    board.push_back(ln1);
+    board.push_back(ln2);
+    board.push_back(ln3);
+
+    bool turn = true;
+    cout &lt;&lt; "Game Started!\n\n";
+
+    while (true)
+    {
+        int x, y;
+        if (turn)
+        {
+            setColor("blue");
+            cout &lt;&lt; "Enter X (row, column): ";
+            cin &gt;&gt; x &gt;&gt; y;
+
+            if (x &gt;= 0 && x &lt; 3 && y &gt;= 0 && y &lt; 3 && board[x][y] == '-')
+            {
+                board[x][y] = 'X';
+                turn = false;
+            }
+            else
+            {
+                cout &lt;&lt; "Invalid move, try again.\n";
+                continue;
+            }
+        }
+        else
+        {
+            setColor("red");
+            cout &lt;&lt; "Enter O (row, column): ";
+            cin &gt;&gt; x &gt;&gt; y;
+
+            if (x &gt;= 0 && x &lt; 3 && y &gt;= 0 && y &lt; 3 && board[x][y] == '-')
+            {
+                board[x][y] = 'O';
+                turn = true;
+            }
+            else
+            {
+                cout &lt;&lt; "Invalid move, try again.\n";
+                continue;
+            }
+        }
+
+        // Print the board
+        cout &lt;&lt; "\n";
+        for (int i = 0; i &lt; 3; i++)
+        {
+            for (int j = 0; j &lt; 3; j++)
+            {
+                if (board[i][j] == 'X')
+                {
+                    setColor("blue");
+                }
+                else if (board[i][j] == 'O')
+                {
+                    setColor("red");
+                }
+                else
+                {
+                    setColor("white");
+                }
+                cout &lt;&lt; board[i][j] &lt;&lt; " ";
+            }
+            cout &lt;&lt; "\n";
+        }
+        cout &lt;&lt; "\n";
+
+        // Check for winner
+        if (isWinner(board))
+        {
+            setColor("white");
+            cout &lt;&lt; "Congratulations! ";
+            if (!turn)
+            {
+                setColor("blue");
+                cout &lt;&lt; "X is the winner!\n";
+            }
+            else
+            {
+                setColor("red");
+                cout &lt;&lt; "O is the winner!\n";
+            }
+            break;
+        }
+
+        //Check If Tie
+        bool tie = true;
+        for (int i = 0; i &lt; 3; i++)
+        {
+            for (int j = 0; j &lt; 3; j++)
+            {
+                if (board[i][j] == '-')
+                {
+                    tie = false;
+                }
+            }
+            cout &lt;&lt; "\n";
+        }
+        cout &lt;&lt; "\n";
+
+        if (tie)
+        {
+            cout &lt;&lt; "\nTIE!\n";
+            break;
+        }
+    }
+    setColor("white");
+    string anything;
+    cout &lt;&lt; "\nEnter Anything To Exit.\n";
+    cin &gt;&gt; anything;
+    return 0;
+}
+
+                </pre>
+            </h2>
+        </div>
+        <div class="project">
+            <h1 id="int" style="display:inline-block"><i class="fa-solid fa-file"></i>Grade Counter.cpp</h1><pre style="display:inline">             </pre><button style="display:inline" onclick="copyCode('#int7')" id="cpBtn">Copy</button>
+            <h1  class="code2">
+<pre id="int7" style="font-size: 40px;"> <!-- Second : Grade Counter-->
+        #include &lt;iostream&gt;
+        #include &lt;cmath&gt;
+        using namespace std;
+        
+        int main()
+        {
+            int MenuMode; //Show Which Mode Selected In First Menu
+        
+            cout &lt;&lt; "Select Mode: " &lt;&lt; endl; //First Menu
+            cout &lt;&lt; "1. Count Half-Year Grade" &lt;&lt; endl;
+            cout &lt;&lt; "2. Count Full-Year Garde" &lt;&lt; endl;
+        
+            cin &gt;&gt; MenuMode;
+            cout &lt;&lt; endl;
+            cout &lt;&lt; "Mode Selected  :  " &lt;&lt; MenuMode &lt;&lt; endl;
+        
+            if (MenuMode != 1 && MenuMode != 2) //If There Is No Mode Like User Entered
+            {
+                cout &lt;&lt; "Wrong Code Entered! Please Restart Console." &lt;&lt; endl;
+            }
+            else if (MenuMode == 1) //If User Selected The First Mode : 1. Count Half-Year Grade
+            {
+                int HalfYearMode; // Shows Which Mode Selected In HalfYearMenu
+                cout &lt;&lt; "Select Mode : " &lt;&lt; endl; //HalfYearMenu
+                cout &lt;&lt; "1. Count With 3 Little Exams" &lt;&lt; endl;
+                cout &lt;&lt; "2. Count With 4 Little Exams" &lt;&lt; endl;
+                cout &lt;&lt; "3. Count With 5 Little Exams" &lt;&lt; endl;
+                cout &lt;&lt; "4. Count With 3 Little And 1 Big Exam" &lt;&lt; endl;
+                cout &lt;&lt; "5. Count With 4 Little And 1 Big Exam " &lt;&lt; endl;
+                cout &lt;&lt; "6. Count With 5 Little And 1 Big Exam" &lt;&lt; endl;
+                cout &lt;&lt; endl;
+        
+                cin &gt;&gt; HalfYearMode;
+                cout &lt;&lt; endl;
+                cout &lt;&lt; "Mode Selected  :  " &lt;&lt; HalfYearMode &lt;&lt; endl;
+                cout &lt;&lt; endl;
+        
+        
+                if (HalfYearMode != 1 && HalfYearMode != 2 && HalfYearMode != 3 && HalfYearMode 
+                != 4 && HalfYearMode != 5 && HalfYearMode != 6) //If There Is No 
+                //Mode Like User Entered
+                {
+                    cout &lt;&lt; "Wrong Code Entered! Please Restart The Console." &lt;&lt; endl;
+                }
+                else if (HalfYearMode == 1) // If User Selected First Half-Year Mode : Count With 
+                //3 Little Exams
+                {
+                    double ksq1, ksq2, ksq3; //Exams
+                    double FinalGrade; //Last Grade
+        
+                    cout &lt;&lt; "Enter First Little Exam Grade :  "; //First Exam
+                    cin &gt;&gt; ksq1;
+                    cout &lt;&lt; endl;
+                    cout &lt;&lt; endl;
+        
+                    cout &lt;&lt; "Enter Second Little Exam Grade :  ";//second Exam
+                    cin &gt;&gt; ksq2;
+                    cout &lt;&lt; endl;
+                    cout &lt;&lt; endl;
+        
+                    cout &lt;&lt; "Enter Third Little Exam Grade :  ";//Third Exam
+                    cin &gt;&gt; ksq3;
+                    cout &lt;&lt; endl;
+                    cout &lt;&lt; endl;
+        
+                    FinalGrade = (ksq1 + ksq2 + ksq3) / 3; //Counting Final Grade
+                    FinalGrade = round(FinalGrade); //Rounding It( Like 9.54 = 10 or 4.2 = 4)
+                    cout &lt;&lt; "Your Half-Year Final Grade Is  :  " &lt;&lt; FinalGrade &lt;&lt; "."; 
+                    // Output Of FinalGrade
+                }
+                else if (HalfYearMode == 2) // If User Selected Second Half-Year Mode 
+                //: Count With 4 Little Exams
+                {
+                    double ksq1, ksq2, ksq3, ksq4; //Exams
+                    double FinalGrade; //Last Grade
+        
+                    cout &lt;&lt; "Enter First Little Exam Grade :  "; //First Exam
+                    cin &gt;&gt; ksq1;
+                    cout &lt;&lt; endl;
+                    cout &lt;&lt; endl;
+        
+                    cout &lt;&lt; "Enter Second Little Exam Grade :  ";//second Exam
+                    cin &gt;&gt; ksq2;
+                    cout &lt;&lt; endl;
+                    cout &lt;&lt; endl;
+        
+                    cout &lt;&lt; "Enter Third Little Exam Grade :  ";//Third Exam
+                    cin &gt;&gt; ksq3;
+                    cout &lt;&lt; endl;
+                    cout &lt;&lt; endl;
+        
+                    cout &lt;&lt; "Enter Fourth Little Exam Grade :  ";//Fourth Exam
+                    cin &gt;&gt; ksq4;
+                    cout &lt;&lt; endl;
+                    cout &lt;&lt; endl;
+        
+                    FinalGrade = (ksq1 + ksq2 + ksq3 + ksq4) / 4; //Counting Final Grade
+                    FinalGrade = round(FinalGrade); //Rounding It( Like 9.54 = 10 or 4.2 = 4)
+                    cout &lt;&lt; "Your Half-Year Final Grade Is  :  " &lt;&lt; FinalGrade &lt;&lt; "."; 
+                    // Output Of FinalGrade
+                }
+                else if (HalfYearMode == 3) // If User Selected Third Half-Year Mode 
+                //: Count With 5 Little Exams
+                {
+                    double ksq1, ksq2, ksq3, ksq4, ksq5; //Exams
+                    double FinalGrade; //Last Grade
+        
+                    cout &lt;&lt; "Enter First Little Exam Grade :  "; //First Exam
+                    cin &gt;&gt; ksq1;
+                    cout &lt;&lt; endl;
+                    cout &lt;&lt; endl;
+        
+                    cout &lt;&lt; "Enter Second Little Exam Grade :  ";//second Exam
+                    cin &gt;&gt; ksq2;
+                    cout &lt;&lt; endl;
+                    cout &lt;&lt; endl;
+        
+                    cout &lt;&lt; "Enter Third Little Exam Grade :  ";//Third Exam
+                    cin &gt;&gt; ksq3;
+                    cout &lt;&lt; endl;
+                    cout &lt;&lt; endl;
+        
+                    cout &lt;&lt; "Enter Fourth Little Exam Grade :  ";//Fourth Exam
+                    cin &gt;&gt; ksq4;
+                    cout &lt;&lt; endl;
+                    cout &lt;&lt; endl;
+        
+                    cout &lt;&lt; "Enter Fifth Little Exam Grade :  ";//Fifth Exam
+                    cin &gt;&gt; ksq5;
+                    cout &lt;&lt; endl;
+                    cout &lt;&lt; endl;
+        
+                    FinalGrade = (ksq1 + ksq2 + ksq3 + ksq4 + ksq5) / 5; 
+                    FinalGrade = round(FinalGrade); //Rounding It( Like 9.54 = 10 or 4.2 = 4)
+                    cout &lt;&lt; "Your Half-Year Final Grade Is  :  " &lt;&lt; FinalGrade &lt;&lt; "."; 
+                    // Output Of FinalGrade
+                }
+                else if (HalfYearMode == 4) // If User Selected Fourth Half-Year Mode 
+                //: Count With 3 Little And 1 Big Exam
+                {
+                    double ksq1, ksq2, ksq3, bsq;
+                    double FinalGrade;
+        
+                    cout &lt;&lt; "Enter First Little Exam Grade :  "; //First Exam
+                    cin &gt;&gt; ksq1;
+                    cout &lt;&lt; endl;
+                    cout &lt;&lt; endl;
+        
+                    cout &lt;&lt; "Enter Second Little Exam Grade :  ";//second Exam
+                    cin &gt;&gt; ksq2;
+                    cout &lt;&lt; endl;
+                    cout &lt;&lt; endl;
+        
+                    cout &lt;&lt; "Enter Third Little Exam Grade :  ";//Third Exam
+                    cin &gt;&gt; ksq3;
+                    cout &lt;&lt; endl;
+                    cout &lt;&lt; endl;
+        
+                    cout &lt;&lt; "Enter Big Exam Grade  :  ";//big exam
+                    cin &gt;&gt; bsq;
+                    cout &lt;&lt; endl;
+                    cout &lt;&lt; endl;
+        
+                    FinalGrade = ((((ksq1 + ksq2 + ksq3) / 3) / 100) * 40) + ((bsq / 100) * 60); 
+                    FinalGrade = round(FinalGrade);//Rounding It( Like 9.54 = 10 or 4.2 = 4)
+                    cout &lt;&lt; "Your Half-Year Final Grade Is  :  " &lt;&lt; FinalGrade &lt;&lt; "."; 
+                    // Output Of FinalGrade
+                }
+                else if (HalfYearMode == 5) // If User Selected Second Half-Year Mode 
+                //: Count With 4 Little And 1 Big Exam
+                {
+                    double ksq1, ksq2, ksq3, ksq4, bsq;
+                    double FinalGrade;
+        
+                    cout &lt;&lt; "Enter First Little Exam Grade :  "; //First Exam
+                    cin &gt;&gt; ksq1;
+                    cout &lt;&lt; endl;
+                    cout &lt;&lt; endl;
+        
+                    cout &lt;&lt; "Enter Second Little Exam Grade :  ";//second Exam
+                    cin &gt;&gt; ksq2;
+                    cout &lt;&lt; endl;
+                    cout &lt;&lt; endl;
+        
+                    cout &lt;&lt; "Enter Third Little Exam Grade :  ";//Third Exam
+                    cin &gt;&gt; ksq3;
+                    cout &lt;&lt; endl;
+                    cout &lt;&lt; endl;
+        
+                    cout &lt;&lt; "Enter Fourth Little Exam Grade :  ";//Fourth Exam
+                    cin &gt;&gt; ksq4;
+                    cout &lt;&lt; endl;
+                    cout &lt;&lt; endl;
+        
+                    cout &lt;&lt; "Enter Big Exam Grade  :  ";//big exam
+                    cin &gt;&gt; bsq;
+                    cout &lt;&lt; endl;
+                    cout &lt;&lt; endl;
+        
+                    FinalGrade = ((((ksq1 + ksq2 + ksq3 + ksq4) / 4) / 100) * 40) + ((bsq / 100) * 60);
+                    FinalGrade = round(FinalGrade);//Rounding It( Like 9.54 = 10 or 4.2 = 4)
+                    cout &lt;&lt; "Your Half-Year Final Grade Is  :  " &lt;&lt; FinalGrade &lt;&lt; ".";
+                    // Output Of FinalGrade
+                }
+                else if (HalfYearMode == 6) // If User Selected Second 
+                //Half-Year Mode : Count With 5 Little And 1 Big Exam
+                {
+                    double ksq1, ksq2, ksq3, ksq4, ksq5, bsq;
+                    double FinalGrade;
+        
+                    cout &lt;&lt; "Enter First Little Exam Grade :  "; //First Exam
+                    cin &gt;&gt; ksq1;
+                    cout &lt;&lt; endl;
+                    cout &lt;&lt; endl;
+        
+                    cout &lt;&lt; "Enter Second Little Exam Grade :  ";//second Exam
+                    cin &gt;&gt; ksq2;
+                    cout &lt;&lt; endl;
+                    cout &lt;&lt; endl;
+        
+                    cout &lt;&lt; "Enter Third Little Exam Grade :  ";//Third Exam
+                    cin &gt;&gt; ksq3;
+                    cout &lt;&lt; endl;
+                    cout &lt;&lt; endl;
+        
+                    cout &lt;&lt; "Enter Fourth Little Exam Grade :  ";//Fourth Exam
+                    cin &gt;&gt; ksq4;
+                    cout &lt;&lt; endl;
+                    cout &lt;&lt; endl;
+        
+                    cout &lt;&lt; "Enter Fifth Little Exam Grade :  ";//Fifth Exam
+                    cin &gt;&gt; ksq5;
+                    cout &lt;&lt; endl;
+                    cout &lt;&lt; endl;
+        
+                    cout &lt;&lt; "Enter Big Exam Grade  :  ";//big exam
+                    cin &gt;&gt; bsq;
+                    cout &lt;&lt; endl;
+                    cout &lt; endl;
+        
+                    FinalGrade = ((((ksq1 + ksq2 + ksq3 + ksq4 + ksq5) / 5) / 100) * 40) + ((bsq / 100) * 60);
+                    FinalGrade = round(FinalGrade);//Rounding It( Like 9.54 = 10 or 4.2 = 4)
+                    cout &lt; "Your Half-Year Final Grade Is  :  " &lt;&lt; FinalGrade &lt;&lt; "."; 
+                    // Output Of FinalGrade
+                }
+        
+            }
+            else if (MenuMode == 2)
+            {
+                double Half1, Half2; //Grades
+                double FinalGrade; //Last Grade
+        
+                cout &lt;&lt; "Enter First Half-Year Grade  :   "; 
+                cin &gt;&gt; Half1;
+                cout &lt;&lt; endl;
+                cout &lt;&lt; endl;
+        
+                cout &lt;&lt; "Enter Second Half-Year Grade  :  ";
+                cin &gt;&gt; Half2;
+                cout &lt;&lt; endl;
+                cout &lt;&lt; endl;
+        
+                FinalGrade = (Half1 + Half2) / 2;
+                FinalGrade = round(FinalGrade);
+                cout &lt;&lt; "Your Full-Year Grade Is  :  " &lt;&lt; FinalGrade &lt;&lt; ".";
+                cout &lt;&lt; endl;
+            }
+            
+        
+        
+            int Ending;
+            cin &gt;&gt; Ending;
+        
+        
+            for (int ErrorFix = 0; ErrorFix &gt; -1; ErrorFix++)
+            {
+                Ending = ErrorFix;
+            }
+        
+            return 0;
+        }                    
+</pre>
+            </h1>
+        </div>
+
+        <div class="project">
+            <h1 id="int" style="display: inline"><i class="fa-solid fa-file"></i>Basic Login And Registiration System.cpp</h1><pre style="display:inline">             </pre><button style="display:inline" onclick="copyCode('#int6')" id="cpBtn">Copy</button>
+            <h1  class="code3"> <!-- Third : Login System-->
+<pre style="
+font-size: 40px" id="int6">
+
+    #include "HeaderForReg.h"
+    using namespace std;
+
+    int main()
+    {
+
+        //File To Check If Registered
+        ifstream regFile("C:\\regLog.txt");
+
+        //If User Already Registered
+        if (regFile)
+        {
+            string username;
+            string password;
+            cout &lt;&lt; "\nEnter Username : \n";
+            getline(cin, username);
+            cout &lt;&lt; "\nEnter Password : \n";
+            getline(cin, password);
+            ifstream nameCheck("C:\\" + username + ".txt");
+            ifstream passCheck("C:\\" + password + ".txt");
+            if (nameCheck && passCheck)
+            {
+                cout &lt;&lt; "\nLogin Succesfull!\n";
+                cout &lt;&lt; "\nWelcome ";
+                cout &lt;&lt; username;
+                cout &lt;&lt; "!\n";
+            }
+            else
+            {
+                cout &lt;&lt; "\n Error : Username Or Password Is Wrong.\n";
+            }
+        }
+        else //If User Did Not Register
+        {
+            cout &lt;&lt; "\n You Are Not Registered. Want To Register?\n";
+            string ans;
+            getline(cin, ans);
+            if (ans == "yes" or ans == "Yes" or ans == "YEs" or ans == "YES" or ans == "yEs" or ans == "yeS" or ans == "yES" or ans == "y" or ans == "Y")
+            {
+                ofstream logFile("C:\\regLog.txt");
+
+                if (logFile.is_open())
+                {
+                    extraString name, password;
+                    vector&lt;char> nameChars;
+                    vector&lt;char> passChars;
+                    char nameLetter;
+                    char passLetter;
+                    string name1;
+                    string pass1;
+
+
+                    cout &lt;&lt; "\nEnter UserName : \n";
+                    name.GetExtraString();
+                    cout &lt;&lt; "\nEnter Password : \n";
+                    password.GetExtraString();
+                    nameChars = name.GetChar();
+                    passChars = password.GetChar();
+                    size_t nameSize = nameChars.size();
+                    size_t passSize = passChars.size();
+                    logFile &lt;&lt; "Name : " &lt;&lt; endl;
+
+                    for (size_t Counter = 0; Counter &lt; nameSize; Counter++)
+                    {
+                        nameLetter = nameChars[Counter];
+                        logFile &lt;&lt; nameLetter;
+                        name1 += nameLetter;
+                    }
+                    logFile &lt;&lt; endl;
+                    logFile &lt;&lt; "Password : " &lt;&lt; endl;
+                    for (size_t Counter = 0; Counter &lt; passSize; Counter++)
+                    {
+                        passLetter = passChars[Counter];
+                        logFile &lt;&lt; passLetter;
+                        pass1 += passLetter;
+                    }
+                    ofstream nameCheck("C:\\" + name1 + ".txt");
+                    ofstream passCheck("C:\\" + pass1 + ".txt");
+                    if (nameCheck.is_open() && passCheck.is_open())
+                    {
+                        nameCheck.close();
+                        passCheck.close();
+                        cout &lt;&lt; "\nRegistered Succesfully!\n";
+                    }
+                    else
+                    {
+                        cout &lt;&lt; "\nError While Creating Register File...\n";
+                    }
+                    logFile &lt;&lt; endl;
+                    logFile.close();
+
+                }
+                else
+                {
+                    cout &lt;&lt; "\nError While Creating Register File...\n";
+                }
+            }
+        }
+
+        return 0;
+    }
+</pre>
+            </h1>
+        </div>
+    </div>
+ 
+    <div class="msc">
+        <!-- Page To Play Some Music-->
+        <h1 id="int">Musics</h1>
+        <!-- Musics I Found Random From Web-->
+        <audio src="Audio Files/Deck The Halls.mp3" controls style="display: inline;"></audio><h1 id="int" style="display: inline;">Deck The Halls</h1>
+        <br>
+        <audio src="Audio Files/Jingle Bells .mp3" controls style="display: inline;"></audio><h1 id="int" style="display: inline;">Jing Bells</h1>
+        <br>
+        <audio src="Audio Files/O Holy Night.mp3" controls style="display: inline;"></audio><h1 id="int" style="display: inline;">O Holy Night</h1>
+    </div>
+    <!-- Skip Line-->
+    <br>
+    <hr>
+    <div id="end">
+        <!-- Ending Messages-->
+        <h1 style="display: inline;">Thanks For Using Us!</h1><img style="display: inline;" src="https://cdn.discordapp.com/icons/1051030547402588170/d8b8d61d78d12bf73907cf1fdad0cf55.webp?size=128" width="48" height="48"></img>
+        <h2>Developer : ~cM</h2>
+        <!-- Links To Download Files-->
+        <a id="HyperText" href="index.html" download target=""><i class="fa-solid fa-code"></i></i>index.html</a>
+        <a id="HyperText" href="index.js" download><i class="fa-solid fa-code"></i></i>index.js</a>
+        <a id="HyperText" href="style.css" download><i class="fa-solid fa-code"></i></i>style.css</a>
+        <br> <!-- Skip Line-->
+        <br> <!-- Skip Line-->
+        <!-- Discord And Github Links-->
+        <a id="HyperText" href="https://discord.gg/5W4XtHkc6g" target="_blank"><i class="fa-brands fa-discord"></i>Discord</a>
+        <a id="HyperText" href="https://github.com/cMardc" target="_blank"><i class="fa-brands fa-github"></i>GitHub</a>
+    </div>
+</body>
+</html>
+<!-- END!-->

@@ -1,0 +1,288 @@
+
+
+@keyframes mySlide/*Starting Page "WELCOME" Animation*/
+{
+  from{margin-left: 100%}
+  to{margin-left: 0%}
+}
+
+body /*Body Configuration*/
+{
+  background: linear-gradient(skyblue, lightgreen);
+  /*Make Background SkyBlue And LightGreen*/
+  background-repeat: no-repeat;
+  /*Do Not Repeat Colors*/
+  background-attachment: fixed;
+  /*Fix Code*/
+}
+
+#extra /*Welcome Sign Animating*/
+{
+  animation:mySlide;
+  animation-iteration-count:infinite;
+  animation-timing-function: ease-out;
+  animation-duration:5s;
+}
+
+.welcome /*Welcome Sign*/
+{
+  border-style: solid;/*Make Border*/
+  border-width: 10px;/*Make It's Width Ten Pixels*/
+  border-radius: 10px; /*Make It's Radious Ten Pixels*/
+  border-color: crimson; /*Border's Color Is Crimson(Red Like)*/
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  /*Available Fonts For Sign*/
+  /*Select Other If One Of Them Is Not Supported*/
+  color:darkslateblue;
+  /*Make Text's Color Dark Slate Blue*/
+  font-size: 80px;
+  /*Make Text Size 80 Pixels*/
+}
+
+.wifi /*WIFI Configuration Signs*/
+{
+  border-style: solid; /*Create Solid Border*/
+  border-width: 10px;  /*Make It's Width Ten Pixels*/
+  border-radius: 10px; /*Make It's Radious Ten Pixels*/
+  border-color: blue; /*Border's Color Is Blue*/
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  /*Available Fonts For Sign*/
+  /*Select Other If One Of Them Is Not Supported*/
+  color:darkslateblue;
+  /*Make Text's Color Dark Slate Blue*/
+}
+
+#int /*Any Sign With Id As 'int'*/
+{
+  font-size: 40px; 
+  /*Change Text Size To 40 Pixels*/
+}
+
+.intSettings /*Internet Settings Sign*/
+{   
+  border-style: solid; /*Create Solid Border*/
+  border-width: 10px; /*Make It's Width Ten Pixels*/
+  border-color: rgb(75, 12, 99);
+  /*Set A Custom Color To It*/
+  margin: 10px;
+  /*Make Space Of 10 Pixels From Top, Bottom, Left And Right*/
+  font-size: xx-large; /*Make Text Size Big*/
+  font-family:  'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  /*Available Fonts For Sign*/
+  /*Select Other If One Of Them Is Not Supported*/
+  color:darkslateblue;
+  /*Make Text's Color Dark Slate Blue*/
+}
+
+.me /*About Me Page Class*/
+{
+  border-style: solid; /*Create Solid Border*/
+  border-width: 10px;  /*Make It's Width Ten Pixels*/
+  border-radius: 10px; /*Make It's Radious Ten Pixels*/
+  border-color: darkviolet; /*Border's Color Is Dark Violet*/
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  /*Available Fonts For Sign*/
+  /*Select Other If One Of Them Is Not Supported*/
+  color:darkslateblue;
+  /*Make Text's Color Dark Slate Blue*/
+
+}
+
+.phn /*Pone Sign Class From About Me Page*/
+{
+  border-style: solid; /*Create Solid Border*/
+  border-width: 10px;  /*Make It's Width Ten Pixels*/
+  border-radius: 10px; /*Make It's Radious Ten Pixels*/
+  border-color: crimson; /*Border's Color Is Crimson(Red Like)*/
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  /*Available Fonts For Sign*/
+  /*Select Other If One Of Them Is Not Supported*/
+  color:green;
+  /*Make Text's Color Green*/
+}
+
+
+/* Customize the label (the container) */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+
+
+.saveBtn /*Button*/
+{
+    border-style: inset; /*Create Border*/
+    border-color: green; /*Border's Color Is Green*/
+    background-color: darkgreen; /*Border's Background Is Dark Green*/
+    color:white; /*Element Color Is White*/
+}
+
+
+
+.projects /*My Projects Sign*/
+{
+  border-style: solid; /*Create Solid Border*/
+  border-width: 10px;  /*Make It's Width Ten Pixels*/
+  border-radius: 10px; /*Make It's Radious Ten Pixels*/
+  border-color: rgb(90, 99, 12);
+  /*Set A Custom Color To It*/
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  /*Available Fonts For Sign*/
+  /*Select Other If One Of Them Is Not Supported*/
+  color:rgb(29, 12, 99);
+  /*Set A Custom Element Color To It*/
+}
+
+.project /*Single Project Sign*/
+{
+  border-style: solid; /*Create Solid Border*/
+  border-width: 10px;  /*Make It's Width Ten Pixels*/
+  border-radius: 10px; /*Make It's Radious Ten Pixels*/
+  border-color: rgb(45, 56, 124);
+  /*Set A Custom Color To It*/
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  /*Available Fonts For Sign*/
+  /*Select Other If One Of Them Is Not Supported*/
+  color:rgb(12, 55, 99);
+  /*Set A Custom Element Color To It*/
+}
+
+pre /*Signs That Are With Spaces (Project Codes)*/
+{
+  font: size 30px; /*Make It's Size 30 Pixel*/
+  color:darkblue; /*Make It's Color Dark Blue*/
+}
+
+
+#int4 /*Copy-For Text Sign*/
+{
+  font-size: 40px; /*Make Text Size 40 Pixels*/
+}
+
+#cpBtn /*Copy Button*/
+{
+  background-color: #4CAF50; /*Create Green Background*/
+  border: none; /*Don't Create Border*/
+  color: white; /*Make White Element Color*/
+  padding: 15px 32px; /*Make Spaces For 15 And 32 Pixels(up, down)(left,right)*/
+  text-align: center; /*Center Given Text(Label)*/
+  text-decoration: none; /*Don't Add Decoration*/
+  display: inline-block; /*Make On Same Line*/
+  font-size: 16px; /*Make Text Size 16 Pixels*/
+}
+ 
+.code2 /*Code2 Class For Pre Signs*/
+{
+  font-size: 40px; /*Make Text Size 40 Pixels*/
+}
+
+#end /*Ending Part(Div)*/
+{
+  padding: 30px; /*Make Space For 30 Pixels*/
+  border-style: outset; /*Create Border*/
+  border-color: black; /*With Color Black*/
+  border-width: 25px; /*Width Of 25 Pixels*/
+  background-color: rgb(36, 31, 31);
+  /*Set A Custom Color To It*/
+  color: aqua;
+  /*Make Text's Color Aqua*/
+}
+
+#HyperText /*<a> Elements With Id Of HyperText*/
+{
+  color:aquamarine;
+  /*Set Element Color To Aquamarine*/
+  background-color: black;
+  /*Set Background Color As Black*/
+  display: inline-block;
+  /*Make On Same Line*/
+  padding: 15px 32px;/*Make Spaces For 15 And 32 Pixels(up, down)(left,right)*/
+  text-align: center; /*Center Given Text(Label)*/
+  text-decoration: none; /*Don't Add Decoration*/
+  font-size: 16px; /*Make Text Size 16 Pixels*/
+}
+
+
+
+#int5 /*For-Copy Id As int5*/
+{
+  font-size: 40px; /*Make Text Size 40 Pixels*/
+}
+
+
+.msc /*For Music*/
+{
+  border-style: solid; /*Create Solid Border*/
+  border-width: 10px; /*Border Width Is 10 Pixels*/
+  border-radius: 10px; /*Radius Is 10 Pixels*/
+  border-color: rgb(33, 132, 129);
+  /*Set A Custom Color To It*/
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  /*Available Fonts For Sign*/
+  /*Select Other If One Of Them Is Not Supported*/
+  color:rgb(12, 55, 99);
+  /*Set A Custom Element Color To It*/
+}
